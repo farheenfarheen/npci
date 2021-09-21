@@ -1,0 +1,38 @@
+package javapractise;
+
+import java.util.Scanner;
+
+public class basics1 {
+	public static void main(String args[])
+	{
+		Scanner sc= new Scanner(System.in);
+		int num=sc.nextInt();
+		int digit=0,temp=0;
+		for(int i=0;i<num;i++)
+		{
+			num=num/10;
+			digit++;
+		}
+		//finding the number of digits
+		digit=digit+1;
+		//calculating  result
+		if(digit%2==0)
+		{
+			int res=digit*digit;
+			System.out.println(digit+","+res);
+		}
+		else if(digit%3==0)
+		{
+		
+			int res=digit*digit*digit;
+			System.out.println(digit+","+res);
+		}
+		else
+		{
+			int a=digit-1; // calculating nearest smallest number as it is not divisible by 2 number must be odd so subtracting by 1  
+			int res=a*a;
+			System.out.println(digit+"["+a+"]"+res);
+		}
+	}
+
+}
