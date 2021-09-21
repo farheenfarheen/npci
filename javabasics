@@ -1,0 +1,29 @@
+package javapractise;
+
+import java.util.Scanner;
+
+public class basics {
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int firstvalue=sc.nextInt();
+		int secondvalue=sc.nextInt();
+		int a=0;
+		
+			if((secondvalue==firstvalue*firstvalue)&&(secondvalue%firstvalue==0))
+			{
+				System.out.println(secondvalue+"is a sqaure and multiple of "+firstvalue);
+			}
+			else if(secondvalue%firstvalue==0)
+			{
+				a=secondvalue/firstvalue;
+				System.out.println(secondvalue+"is a multiple of"+firstvalue+"="+a+"s of"+firstvalue);
+			}
+			else
+			{
+				System.out.println(secondvalue+"is neither square nor multiple of"+firstvalue);
+			}
+		
+	}
+
+}
