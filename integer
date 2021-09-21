@@ -1,0 +1,32 @@
+package javapractise;
+
+import java.util.Scanner;
+
+public class identifyinginput {
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		double num=sc.nextDouble();
+		
+		if( -128 < num && num<127 )
+		{
+			byte a=(byte)num;
+			System.out.println(a+"is a byte");
+		}
+		else if(-32768 <num && num < 32767 )
+		{
+			short a=(short)num;
+			System.out.println(a+"is a short");
+		}
+		else if(-2147483648  <num && num < 2147483647 )
+		{
+			int a=(int)num;
+			System.out.println(a+"is a integer");
+		}
+		
+
+	}
+   
+  
+	
+}
