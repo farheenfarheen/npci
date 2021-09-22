@@ -1,0 +1,112 @@
+//program contains methods
+
+
+package javapractise;
+
+import java.util.Scanner;
+
+public class sample {
+	Scanner sc= new Scanner(System.in);
+	public int nterms=sc.nextInt();
+	public int a[]=new  int[nterms];
+	int n1=0,n2=1	,count = 0;
+	
+    
+	public void method1()
+	{
+		if (nterms <= 0) {
+			System.out.print("enter positive number");
+			
+		}
+		   
+		else if (nterms == 1)
+
+				{
+			
+				
+		   System.out.print("Fibonacci sequence upto"+nterms+":");
+		  System.out.print(n1);
+		  a[0]=n1;
+				}
+		
+		else {
+		   System.out.print("Fibonacci sequence:");
+
+		}
+			   
+		  
+		   while (count < nterms)
+		   {
+		       System.out.print(n1);
+		      
+		      int  nth = n1 + n2;
+		      a[count]=n1;
+		      
+		       n1 = n2;
+		       n2 = nth;
+		       count += 1;
+		       
+		   }
+		  
+		   
+	}
+	public void method3(int i)
+	{
+		
+		int s=0;
+		
+			if(i%2!=0)
+			{
+				s=a[i];
+				System.out.print("\n method2:"+s);
+				
+			}
+		
+		
+
+	}
+	public void method2(int i)
+	{
+		
+			if(i%2==0)
+			{
+				System.out.print("\n method1:"+a[i]);
+				
+			}
+		
+
+	}
+
+	
+	
+
+}
+
+
+
+//calling methods using objects
+
+
+
+
+package javapractise;
+
+
+
+public class fibonacci1 {
+	
+	public static void main(String args[])
+	{
+	
+		sample obj=new sample();
+		
+		obj.method1();
+		
+		
+		for(int i=0;i<obj.nterms;i++)
+		{
+			obj.method2(i);
+			obj.method3(i+1);
+		}
+	}
+}
