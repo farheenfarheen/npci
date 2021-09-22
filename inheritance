@@ -1,0 +1,68 @@
+// grandfathers house
+package javapractise;
+
+public  class grandfather {
+	String name="";
+	int age;
+	public grandfather(String name,int age)
+	{
+		this.name=name;
+		this.age=age;
+	}
+	public void grandfatherhouse() {
+		System.out.println("grand fathers house");
+		System.out.println("grand fathers name: "+name+"\n age:"+age);
+	}
+}
+//father's house
+package javapractise;
+
+public  class father extends grandfather {
+	String name=" ";
+	int age;
+	
+	public father(String name,int age)
+	{
+		super(name,age);
+	}
+	
+	
+	public void fatherhouse()
+	{
+		System.out.println("fathers house");
+		//System.out.println("fathers name"+fname);
+	}
+}
+
+//son
+
+
+package javapractise;
+
+public class son extends father {
+	public son(String name,int age)
+	{
+		super(name,age);
+	}
+	public void house()
+	{
+		System.out.println("house");
+	}
+}
+
+
+//main
+
+package javapractise;
+
+public class inheritance {
+  public static void main(String args[])
+  {
+	  son s=new son("a",40);
+	  s.grandfatherhouse();
+	  s.fatherhouse();
+	  s.house();
+  }
+
+  
+}
