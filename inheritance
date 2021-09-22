@@ -1,7 +1,7 @@
 // grandfathers house
 package javapractise;
 
-public  class grandfather {
+public abstract class grandfather {
 	String name="";
 	int age;
 	public grandfather(String name,int age)
