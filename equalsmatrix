@@ -1,0 +1,50 @@
+package javapractise;
+
+import java.util.Scanner;
+
+public class equals {
+public static void main(String args[])
+{
+	System.out.print("enter rows and columns");
+	Scanner sc= new Scanner(System.in);
+	int n=sc.nextInt();
+	int m=sc.nextInt();
+	int a[][]=new int[n][m];
+	int b[][]=new int[n][m];
+	int f=0;
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<m;j++)
+		{
+			a[i][j]=sc.nextInt();
+		}
+	}
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<m;j++)
+		{
+			b[i][j]=sc.nextInt();
+		}
+	}
+	
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<m;j++)
+		{
+			if(a[i][j]==b[i][j])
+			{
+				f=1;
+			}
+			else
+			{
+				f=0;
+				System.out.print(a[i][j]+" ");
+			}
+		}
+	}
+	if(f==1)
+	{
+		System.out.print("matrice is equal");
+	}
+}
+}
