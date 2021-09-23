@@ -1,0 +1,46 @@
+//vehicle class
+
+package javapractise;
+
+public class vehicle  {
+
+	 public static void main(String args)
+	 {
+		 bike obj=new bike();
+		 
+		 obj.getdetails("maruti");
+		 obj.getBikeDetails("harley");
+	 }
+	 
+}
+   //car class
+   
+   package javapractise;
+
+public class cars {
+	String name=" ";
+	public void getdetails(String name)
+	{
+		this.name=name;
+		if(name=="maruti")
+		{
+			System.out.println(name+"specifications: \n Mileage :	21.5 kmp \n TransmissionType :  Automatic "+"it is a car");
+		}
+	}
+
+}
+//bike class
+
+package javapractise;
+
+public class bike extends cars {
+	String name=" ";
+	public void getBikeDetails(String name)
+	{
+		this.name=name;
+		if(name=="harley")
+		{
+			System.out.println(name+"specifications: \n Emission Type :	BS6  \n  Engine Displ. :	883 cc "+"it is a bike");
+		}
+	}
+}
