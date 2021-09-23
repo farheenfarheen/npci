@@ -1,0 +1,67 @@
+package javapractise;
+
+import java.util.Scanner;
+
+public class empmain  {
+	
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter how many employees need to be added ");
+		int num=sc.nextInt();
+		int a[]=new int[num];
+		System.out.println("\n enter salary");
+		for(int i=0;i<num;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		employee emp=new employee(num,a);
+		emp.details(num);
+		sc.close();
+	}
+}
+
+
+//
+
+package javapractise;
+
+import java.util.Scanner;
+
+public class employee {
+	Scanner sc=new Scanner(System.in);
+	int num,projectCost=0;
+	int a[]=new int[num];
+	int sum=0;
+	
+	public employee(int num,int a[])
+	{
+		this.num=num;
+		this.a=a;
+		
+	}
+	
+	public void details(int num) {
+		projectCost=100;
+		
+		for(int i=0;i<num;i++)
+		{
+			sum=sum+a[i];
+			
+		}
+		int res=projectCost-sum;
+		if(sum==projectCost)
+		{
+			System.out.print("employees are  filled");
+			
+		}
+		else
+		{
+			System.out.println("next employee  will have salary"+res);
+		}
+		
+		
+	}
+
+	
+}
