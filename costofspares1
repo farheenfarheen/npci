@@ -1,0 +1,79 @@
+//main class
+
+package javapractise;
+
+public class cars1 {
+	int res1=0;
+	int res2=0;
+	int res3=0,sum=0;
+	public  void wheels(int n)
+	{
+	 int cost=400;
+	  res1=n*cost;
+	}
+	public  void glasses(int n)
+	{
+		int cost=500;
+		res2=n*cost;
+	
+	}
+	public  void doors(int n)
+	{
+		int cost=650;
+		res3=n*cost;
+	}
+	public void total()
+	{
+		sum=res1+res2+res3;
+		System.out.print("the total cost"+sum);
+	}
+}
+
+
+// calculate total cost
+
+package javapractise;
+
+import java.util.Scanner;
+
+public class cost {
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		cars1 c=new cars1();
+
+		int n=0;
+		do {
+		System.out.println("\n enter which spare you want 1.wheels 2.glasses 3.doors");
+		int ch=sc.nextInt();
+		int n1=0,n2=0,n3=0;
+				c.wheels(n1);
+		if(ch==1)
+		{
+			n1=sc.nextInt();
+			c.wheels(n1);
+		}
+		else if(ch==2)
+		{
+			n2=sc.nextInt();
+			c.glasses(n2);
+		}
+		else if(ch==3)
+		{
+			n3=sc.nextInt();
+			c.doors(n3);
+		}
+		else
+		{
+			System.out.print("\n enter correct value ");
+		}
+		System.out.print("\n enter 4 to exit");
+		n=sc.nextInt();
+		}while(n!=4);
+		c.total();
+		sc.close();
+			}
+	
+
+
+}
